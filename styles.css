@@ -15,4 +15,14 @@ body {
     height: 500px;
     width: 500px;
     background-color: white;
+    display:flex;
+    flex-direction: column;
+    gap: 0;
 }
+
+.canvas {
+    flex: 1;
+    display: flex;
+    gap: 0;
+}
+

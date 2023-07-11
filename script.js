@@ -1,4 +1,5 @@
-const canvas = document.querySelector('#canvas');
+const canvas = document.querySelector('#canvas-container');
+const cells = document.querySelectorAll('.canvas');
 
 for (let i = 0; i < 16; i++) {
     let row = document.createElement("div");
@@ -10,3 +11,4 @@ for (let i = 0; i < 16; i++) {
     row.classList.add("canvas");
     canvas.appendChild(row);
 }
+

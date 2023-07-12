@@ -1,19 +1,30 @@
 const canvas = document.querySelector('#canvas-container');
 
-for (let i = 0; i < 50; i++) {
-    let row = document.createElement("div");
-    for (let j = 0; j < 50; j++) {
-        let cell = document.createElement("div");
-        cell.classList.add("canvas");
-        row.appendChild(cell);
+function setGrid() {
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
     }
-    row.classList.add("canvas");
-    canvas.appendChild(row);
+    let gridSize = document.querySelector('.slider').valueAsNumber;
+    for (let i = 0; i < gridSize; i++) {
+        let row = document.createElement("div");
+        for (let j = 0; j < gridSize; j++) {
+            let cell = document.createElement("div");
+            cell.classList.add("canvas");
+            row.appendChild(cell);
+        }
+        row.classList.add("canvas");
+        canvas.appendChild(row);
+    }
+    let label = document.querySelector(".grid-size");
+    label.innerText = `${gridSize} x ${gridSize}`;
+    let cells = document.querySelectorAll('.canvas');
+    cells.forEach(cell => cell.addEventListener('mouseover', shade));
 }
 
 function shade(e) {
     if (e.buttons) e.target.style.backgroundColor = "black";
 }
 
-const cells = document.querySelectorAll('.canvas');
-cells.forEach(cell => cell.addEventListener('mouseover', shade));
+const slider = document.querySelector('.slider');
+slider.addEventListener('change', setGrid);
+setGrid();

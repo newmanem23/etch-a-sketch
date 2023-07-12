@@ -34,9 +34,15 @@ button {
     flex: 1;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #controls {
     display: inline-flex;
+    flex-wrap: wrap;
     gap: 16px;
+    width: 500px;
 }
 
 .canvas {
@@ -51,5 +57,5 @@ button {
 
 .size-tool {
     text-align: center;
-    flex: auto;
+    flex: 1;
 }

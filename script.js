@@ -1,6 +1,6 @@
 const canvas = document.querySelector('#canvas-container');
 
-function setGrid() {
+function resetGrid() {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
@@ -26,5 +26,5 @@ function shade(e) {
 }
 
 const slider = document.querySelector('.slider');
-slider.addEventListener('change', setGrid);
-setGrid();
+slider.addEventListener('change', resetGrid);
+resetGrid();

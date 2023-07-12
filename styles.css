@@ -36,6 +36,8 @@ button {
 
 button:hover {
     cursor: pointer;
+    scale: 1.05;
+    transition: .1s;
 }
 
 #controls {
@@ -55,7 +57,20 @@ button:hover {
     accent-color: rgb(68, 68, 68)
 }
 
+.slider:hover {
+    scale: 1.05;
+    transition: .1s;
+}
+
 .size-tool {
     text-align: center;
     flex: 1;
+}
+
+.gradient {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    border-radius: 4px;
 }

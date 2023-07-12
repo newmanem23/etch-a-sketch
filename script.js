@@ -28,3 +28,5 @@ function shade(e) {
 const slider = document.querySelector('.slider');
 slider.addEventListener('change', resetGrid);
 resetGrid();
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', resetGrid);

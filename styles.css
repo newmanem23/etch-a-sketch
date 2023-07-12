@@ -30,6 +30,15 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+button {
+    flex: 1;
+}
+
+#controls {
+    display: inline-flex;
+    gap: 16px;
+}
+
 .canvas {
     flex: 1;
     display: flex;
@@ -40,6 +49,7 @@ body {
     accent-color: rgb(68, 68, 68)
 }
 
-.grid-size {
-    margin-top: -16px;
+.size-tool {
+    text-align: center;
+    flex: auto;
 }

@@ -15,7 +15,6 @@ rainbowButton.addEventListener('click', () => {
     } else {
         rainbowButton.classList.add("gradient");
     }
-
 });
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
